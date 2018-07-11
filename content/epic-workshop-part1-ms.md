@@ -1,3 +1,10 @@
+---
+title: "Master markdown"
+date: 2018-07-10T18:08:00-07:00
+anchor: "epic-workshop-part1-ms"
+weight: 90
+---
+
 footer: ©Carol Willing, 2018. [https://speakerdeck.com/willingc/interactivity-in-computer-science](https://speakerdeck.com/willingc/interactivity-in-computer-science)
 slidenumbers: true
 build-lists: true
