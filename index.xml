@@ -58,57 +58,121 @@ If you like &amp;hellip; Organizing, Planning Events
     </item>
     
     <item>
-      <title>Project3</title>
+      <title>Design at Google</title>
       <link>http://willingc.github.io/epic2018cs/project3/</link>
       <pubDate>Tue, 10 Jul 2018 18:08:15 -0700</pubDate>
       
       <guid>http://willingc.github.io/epic2018cs/project3/</guid>
-      <description></description>
+      <description>Project 3 Design at Google Google Doodles See the Google Doodles page.
+Step 1: Try the Doodles Fischinger doodle
+Hip Hop
+Snake Game
+Step 2: Design/UX Review Choose a Google Doodle.
+- What things were interactive?
+- How did it start?
+- How did it end?
+- What do you like best?
+- What would you change?
+Step 3: Sketch a new doodle  Sketch
+ What would be interactive?</description>
     </item>
     
     <item>
-      <title>Project4</title>
+      <title>Project 4: Get started with JavaScript</title>
       <link>http://willingc.github.io/epic2018cs/project4/</link>
       <pubDate>Tue, 10 Jul 2018 18:08:22 -0700</pubDate>
       
       <guid>http://willingc.github.io/epic2018cs/project4/</guid>
-      <description></description>
+      <description>Get started with JavaScript p5.js https://p5js.org/
+Learn about p5.js https://hello.p5js.org/
+Explore Reference | Referencia
+Try the editor https://alpha.editor.p5js.org/
+Interact  Move mouse over image
+ Change | Run | Change | Run
+  Project 4 Get started with JavaScript
+ Use a new language
+ Help with Reference
+ Try the editor
+ Run an example
+  Completed</description>
     </item>
     
     <item>
-      <title>Project5</title>
+      <title>Project 5: Drawing</title>
       <link>http://willingc.github.io/epic2018cs/project5/</link>
       <pubDate>Tue, 10 Jul 2018 18:08:30 -0700</pubDate>
       
       <guid>http://willingc.github.io/epic2018cs/project5/</guid>
-      <description></description>
+      <description>Drawing Modern websites In general:
+ HTML :arrow_right: Structure
+ CSS :arrow_right: Style
+ JavaScript (.js) :arrow_right: interactivity
+  codepen.io to test code :bulb:
+sketch.js is a JavaScript file sketch.js
+function setup() { // put setup code here } function draw() { // put drawing code here }  index.html ```html, [.highlight: 7, 10]
+&amp;lt;!DOCTYPE html&amp;gt;
+
+
+ body {padding: 0; margin: 0;}</description>
     </item>
     
     <item>
-      <title>Project6</title>
+      <title>Project 6: Interactivity</title>
       <link>http://willingc.github.io/epic2018cs/project6/</link>
       <pubDate>Tue, 10 Jul 2018 18:08:38 -0700</pubDate>
       
       <guid>http://willingc.github.io/epic2018cs/project6/</guid>
-      <description></description>
+      <description>Interactivity Interactivity 1 Color Red (r)
+Green (g)
+Blue (b)
+A color is a mix of red, green, blue.
+Color value: 0 to 255
+Interactivity 2 Sliders and Widgets
+#Project 6
+Interactivity
+ Use widgets
+ Control using mouse clicks
+  Completed</description>
     </item>
     
     <item>
-      <title>Project7</title>
+      <title>Project 7: Python, Jupyter, &amp; Binder</title>
       <link>http://willingc.github.io/epic2018cs/project7/</link>
       <pubDate>Tue, 10 Jul 2018 18:08:48 -0700</pubDate>
       
       <guid>http://willingc.github.io/epic2018cs/project7/</guid>
-      <description></description>
+      <description>Python, Jupyter, &amp;amp; Binder Python https://python.org
+Press the yellow button.
+Use Python as an interactive calculator.
+Jupyter and Binder https://jupyter.org
+https://try.jupyter.org
+https://mybinder.org
+https://try.jupyter.org
+Project 7 Python, Jupyter, &amp;amp; Binder
+ Interactivity in the Real World
+ Python programming language
+ Project Jupyter - interactive notebooks
+ Binder - sharing notebooks
+  Completed</description>
     </item>
     
     <item>
-      <title>Project8</title>
+      <title>Project 8: Next steps</title>
       <link>http://willingc.github.io/epic2018cs/project8/</link>
       <pubDate>Tue, 10 Jul 2018 18:08:56 -0700</pubDate>
       
       <guid>http://willingc.github.io/epic2018cs/project8/</guid>
-      <description></description>
+      <description>What&amp;rsquo;s next? Try new applications AI and Machine Learning Examples
+AI Duet
+Sound-Maker
+Tutorials https://hello.p5js.org/
+https://hello.processing.org
+https://learn.adafruit.com
+School classes  College ready curriculum
+ Ask questions
+ Remember, you can :smile:
+  Great job! Your accomplishments
+   Number Project     1 People   2 Careers   3 Design at Google    Javascript: p5.js   4 Getting started   5 Draw   6 Interactivity   7 Python: Jupyter and mybinder.</description>
     </item>
     
     <item>
