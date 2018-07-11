@@ -1,5 +1,5 @@
 ---
-title: "Design at Google"
+title: "Project 3: Design at Google"
 date: 2018-07-10T18:08:15-07:00
 anchor: "project3"
 weight: 30
