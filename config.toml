@@ -21,9 +21,9 @@ theme = "hugo-simpledoc-theme"
     weight = 20
     url = "https://github.com/willingc/epic-interactive/blob/master/epic-workshop.pdf"
 [[menu.top]]
-    name = "Original WPThemeDoc by Rich Tabor"
+    name = "p5.js editor"
     weight = 30
-    url = "https://github.com/richtabor/WPThemeDoc"
+    url = "https://alpha.editor.p5js.org/"
 
 # Site parameters
 [params]
