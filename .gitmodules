@@ -1,0 +1,3 @@
+[submodule "themes/hugo-simpledoc-theme"]
+	path = themes/hugo-simpledoc-theme
+	url = https://github.com/aerohub/hugo-simpledoc-theme
