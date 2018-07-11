@@ -1,5 +1,5 @@
 # Site settings
-baseURL = "http://epic2018cs.pysplash.org/"
+baseURL = "http://willingc.github.io/epic2018cs/"
 languageCode = "en-us"
 title = "Interactivity in Computer Science: EPIC 2018 Workshop"
 theme = "hugo-simpledoc-theme"
