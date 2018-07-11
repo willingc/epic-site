@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>http://willingc.github.io/epic2018cs/project1/</loc>
+    <lastmod>2018-07-10T18:08:00-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://willingc.github.io/epic2018cs/project2/</loc>
+    <lastmod>2018-07-10T18:08:08-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://willingc.github.io/epic2018cs/project3/</loc>
+    <lastmod>2018-07-10T18:08:15-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://willingc.github.io/epic2018cs/project4/</loc>
+    <lastmod>2018-07-10T18:08:22-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://willingc.github.io/epic2018cs/project5/</loc>
+    <lastmod>2018-07-10T18:08:30-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://willingc.github.io/epic2018cs/project6/</loc>
+    <lastmod>2018-07-10T18:08:38-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://willingc.github.io/epic2018cs/project7/</loc>
+    <lastmod>2018-07-10T18:08:48-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://willingc.github.io/epic2018cs/project8/</loc>
+    <lastmod>2018-07-10T18:08:56-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://willingc.github.io/epic2018cs/epic-workshop-part1-ms/</loc>
+  </url>
+  
+  <url>
+    <loc>http://willingc.github.io/epic2018cs/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://willingc.github.io/epic2018cs/</loc>
+    <lastmod>2018-07-10T18:08:00-07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://willingc.github.io/epic2018cs/tags/</loc>
+    <priority>0</priority>
+  </url>
+  
+</urlset>

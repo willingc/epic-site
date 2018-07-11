@@ -1,0 +1,1422 @@
+<!DOCTYPE html>
+<html id="html" lang="en-us">
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width"/>
+    <title>Interactivity in Computer Science: EPIC 2018 Workshop</title>
+    <meta name="description" content="hugo-simpledoc-theme - clean and convenient documentation theme for Hugo website generator">
+    <meta name="author" content="Pavel Kanyshev">
+    <meta name="generator" content="Hugo 0.41" />
+    <style type="text/css">
+    body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td {
+        margin: 0;
+        padding: 0;
+    }
+    * {-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
+    :before, :after {-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
+    img, object, embed {max-width: 100%; height: auto;}
+    object, embed {height: 100%;}
+    img { margin: 1.25% 0; -ms-interpolation-mode: bicubic; }
+    html {
+        background-color: #F0F1F3;
+        padding: 2%;
+    }
+    body {
+        font-size: 16px;
+        line-height: 1.6;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        color: #242424;
+        max-width: 800px;
+        margin: 5% auto;
+       
+    }
+    body::after {
+        clear: both;
+        content: "";
+        display: table;
+    }
+    header {
+        margin-bottom: 8%;
+    }
+    footer {
+        text-align: center;
+    }
+    h1, h2, h3, h4, h5, h1 a {
+        color: #263A48;
+        font-weight: 500;
+        text-decoration: none;
+    }
+    h1, h2 {
+        font-size: 36px;
+        padding-bottom: 0.3em;
+        margin-bottom: 0.4em;
+        border-bottom: 1px solid #eee
+    }
+    h2 {
+        font-size: 22px;
+        padding-bottom: 0.6em;
+        margin-bottom: 0.6em;
+        margin-top: 2.5em;
+    }
+    h3 {
+        font-size: 18px;
+        margin-bottom: 0.3em;
+    }
+    h1 small a {
+        color: #98999C;
+        font-size: 15px;
+        font-weight: normal;
+        float: right;
+        position: absolute;
+        top: 15px;
+        right: 20px;
+    }
+    section {
+        background: #fff;
+        margin-bottom: 1%;
+        position: relative;
+        padding: 6% 8%;
+    }
+    blockquote {
+        border-left: 3px solid #d54e21;
+        font-size: 16px;
+        padding: 0 0 0 20px;
+        color: #d54e21;
+    }
+    blockquote a {
+        color: #d54e21;
+        font-weight: 500;
+    }
+    blockquote code {
+        color: #d54e21;
+    }
+    code, cite {
+        background-color: #F0F2F4;
+        border-radius: 3px;
+        color: #000;
+        font: monospace;
+        padding: 2px 7px;
+    }
+    a {
+        color: #1e8cbe;
+        text-decoration: underline;
+    }
+    a:hover {
+        color: #d54e21;
+    }
+    ul {
+        list-style: none;
+    }
+    ol {
+        list-style: number;
+    }
+    ol li {
+        color: #98999C;
+        margin-bottom: 5px;
+    }
+    ol li:last-child {
+        margin-bottom: 0;
+    }
+    p, ul, ol, blockquote  {
+        margin-bottom: 4%;
+    }
+    ul ul {
+        padding-top: 0;
+        margin-bottom: 0;
+        margin-left: 4%;
+    }
+    ul ul li:before {
+        content: '-';
+        display: inline-block;
+        padding-right: 2%;
+    }
+
+    ul.col-2 {
+        color: #98999C;
+        -webkit-column-count: 2;
+        -moz-column-count: 2;
+        column-count: 2;
+        -webkit-column-gap: 20px;
+        -moz-column-gap: 20px;
+        column-gap: 20px;
+    }
+
+    @media screen and (min-width: 500px) {
+        ul.col-2 {
+            -webkit-column-count: 3;
+            -moz-column-count: 3;
+            column-count: 3;
+            -webkit-column-gap: 20px;
+            -moz-column-gap: 20px;
+            column-gap: 20px;
+        }
+    }
+    nav {
+        background: #F0F1F3;
+        min-width: 215px;
+        margin-bottom: 5px;
+        margin-top: 15px;
+    }
+    nav:first-of-type a {
+        color: #d54e21;
+        border-radius: 0;
+    }
+    nav:first-of-type a:hover {
+        color: #d54e21;
+    }
+    nav:first-of-type a:before {
+        background-color: #d54e21;
+    }
+    nav.affix {
+        position: fixed;
+        top: 20px;
+    }
+    nav.affix-bottom {
+        position: absolute;
+    }
+    nav a {
+        border-radius: 3px;
+        font-size: 15px;
+        display: block;
+        cursor: pointer;
+        font-weight: 500;
+        position: relative;
+        text-decoration: none; 
+        padding: 10px 12px;
+        width: 100%;
+        padding-right: 3px;
+        border-bottom: 2px solid #fff;
+    }
+    nav a:before {
+        content: '';
+        width: 4px;
+        display: block;
+        left: 0;
+        position: absolute;
+        height: 100%;
+        display: none;
+        background: #1e8cbe;
+        top: 0;
+    }
+    nav a:hover {
+        background-color: #E6E8EA;
+        color: #1e8cbe;
+        text-decoration: underline;
+    }   
+    nav a:hover:before {
+        display: block;
+    }
+    nav a:last-of-type {
+        border-bottom: none;
+    }
+    .gist {
+        margin-top: 5.1%;
+        margin-bottom: 5%;
+    }
+    @media screen and (max-width: 1050px) {
+        body {
+            margin: 0 auto;
+        }
+    }
+    @media screen and (max-width: 767px) {
+        header span {
+            display: none;
+        }
+        h1 {
+            font-size: 26px;
+        }
+        h2 {
+            font-size: 20px;
+        }
+    }   
+    @media screen and (max-width: 514px) {
+        p, ul, ol, blockquote  {
+            margin-bottom: 8%;
+        }
+    }
+</style>
+</head>
+
+<body>
+    <section id="Menu">
+        <header>
+            <h1>Interactivity in Computer Science<br />
+ EPIC 2018 Workshop</h1>
+            <p>Helpful links for EPIC 2018 Workshop using <strong>p5.js</strong> and <strong>Project Jupyter</strong></p>
+        </header>
+        <nav>
+        
+            <a href="https://speakerdeck.com/willingc/interactivity-in-computer-science" target="blank">View Workshop Slides</a>
+        
+            <a href="https://github.com/willingc/epic-interactive/blob/master/epic-workshop.pdf" target="blank">View and Download Workshop PDF</a>
+        
+            <a href="https://github.com/richtabor/WPThemeDoc" target="blank">Original WPThemeDoc by Rich Tabor</a>
+        
+        </nav>
+        <nav>
+        
+            <a href="#project1">Project 1: People &amp; Teams</a>
+        
+            <a href="#project2">Project 2: Computer Science Careers</a>
+        
+            <a href="#project3">Project3</a>
+        
+            <a href="#project4">Project4</a>
+        
+            <a href="#project5">Project5</a>
+        
+            <a href="#project6">Project6</a>
+        
+            <a href="#project7">Project7</a>
+        
+            <a href="#project8">Project8</a>
+        
+            <a href="#"></a>
+        
+        </nav>
+    </section>
+
+    
+
+    <section id="project1">
+
+        <h1><a href="#project1">Project 1: People &amp; Teams</a><small><a href="#html">Back to Top</a></small></h1>
+
+        <h1 id="who-uses-computer-science">Who uses computer science?</h1>
+
+<h1 id="task">Task</h1>
+
+<p>Choose someone who you would:</p>
+
+<ul>
+<li>want on your team<br /></li>
+<li>like to meet<br /></li>
+<li>like to ask a question<br />
+<br /></li>
+</ul>
+
+<h1 id="luz-rivas">Luz Rivas</h1>
+
+<p><a href="https://www.luzforassembly.com/">California 39th District, Assembly</a><br />
+<a href="https://www.diygirls.org/founder/">DIY Girls, Founder</a></p>
+
+<h1 id="jesus-medrano">Jesus Medrano</h1>
+
+<p><a href="https://eng.uber.com/android-eats/">Uber Eats, Software Engineer</a></p>
+
+<h1 id="omoju-miller">Omoju Miller</h1>
+
+<p>GitHub, Data Scientist</p>
+
+<p><a href="http://omojumiller.com/about/">About Omoju</a></p>
+
+<p><a href="https://youtu.be/BFWVHSeakkg?t=7s">“On learning AI: The myth of innate ability in tech.”</a></p>
+
+<h1 id="limor-fried-ladyada">Limor Fried (Ladyada)</h1>
+
+<p><a href="https://learn.adafruit.com">Adafruit</a>, Founder and CEO</p>
+
+<p>Electrical Engineer</p>
+
+<p><a href="https://youtu.be/V4WtPv0yWek">About Making video</a></p>
+
+<h1 id="ana-ruvalcaba">Ana Ruvalcaba</h1>
+
+<p><a href="https://jupyter.org">Project Jupyter</a>, Operations Manager</p>
+
+<h1 id="bryan-liles">Bryan Liles</h1>
+
+<p>Heptio, Engineer</p>
+
+<p><a href="https://www.youtube.com/watch?v=fYCoEsc4aaE">Cognitive Bias Talk</a></p>
+
+<p><a href="https://github.com/bryanl">GitHub - Bryan Liles</a></p>
+
+<h1 id="you">You</h1>
+
+<h1 id="project-1-people-teams">Project 1: People &amp; teams</h1>
+
+<ul>
+<li>Teamwork is important<br /></li>
+<li>Find a role model<br /></li>
+<li>Ask questions<br />
+<br /></li>
+</ul>
+
+<p><em>Completed</em></p>
+
+
+    </section>
+
+    
+
+    <section id="project2">
+
+        <h1><a href="#project2">Project 2: Computer Science Careers</a><small><a href="#html">Back to Top</a></small></h1>
+
+        <h1 id="coding">Coding</h1>
+
+<p>is one of many CS careers.</p>
+
+<h1 id="if-you-like">If you like &hellip;</h1>
+
+<p><strong>Organizing, Planning Events</strong></p>
+
+<ul>
+<li>Community Manager<br /></li>
+<li>Operations Manager<br /></li>
+<li>Project Manager<br /></li>
+<li>Business Owner<br />
+<br /></li>
+</ul>
+
+<h1 id="if-you-like-1">If you like &hellip;</h1>
+
+<p><strong>Art</strong></p>
+
+<ul>
+<li>Designer<br /></li>
+<li>Computer Human Interaction Engineer<br /></li>
+<li>Animator<br /></li>
+<li>Web developer<br />
+<br /></li>
+</ul>
+
+<h1 id="if-you-like-2">If you like &hellip;</h1>
+
+<p><strong>Math</strong></p>
+
+<ul>
+<li>Data Scientist<br /></li>
+<li>Research Engineer<br />
+<br /></li>
+</ul>
+
+<h1 id="if-you-like-3">If you like &hellip;</h1>
+
+<p><strong>Writing</strong></p>
+
+<ul>
+<li>Product Manager<br /></li>
+<li>Documentarian<br /></li>
+<li>Game Developer<br /></li>
+<li>Web Content Engineer<br />
+<br /></li>
+</ul>
+
+<h1 id="if-you-like-4">If you like &hellip;</h1>
+
+<p><strong>Music</strong></p>
+
+<ul>
+<li>Sound Engineer<br /></li>
+<li>Special effects<br /></li>
+<li>Computer Generated Musician<br />
+<br />
+<br /></li>
+</ul>
+
+<h1 id="task">Task</h1>
+
+<p><strong>What interests you?</strong></p>
+
+<p>Explore coding and the many other Computer Science careers.</p>
+
+<p>Lifelong learning is important in Computer Science.</p>
+
+<p><a href="https://youtu.be/lHC10q_a7Nc">Made with Code: Limor Fried, Founder of Adafruit</a></p>
+
+<h1 id="project-2-computer-science-careers">Project 2 Computer Science careers</h1>
+
+<ul>
+<li>Find your interests<br /></li>
+<li>Learn which career you may like<br /></li>
+<li>Understand many careers in CS beyond coding<br />
+<br /></li>
+</ul>
+
+<h2 id="completed"><em>Completed</em></h2>
+
+
+    </section>
+
+    
+
+    <section id="project3">
+
+        <h1><a href="#project3">Project3</a><small><a href="#html">Back to Top</a></small></h1>
+
+        
+
+    </section>
+
+    
+
+    <section id="project4">
+
+        <h1><a href="#project4">Project4</a><small><a href="#html">Back to Top</a></small></h1>
+
+        
+
+    </section>
+
+    
+
+    <section id="project5">
+
+        <h1><a href="#project5">Project5</a><small><a href="#html">Back to Top</a></small></h1>
+
+        
+
+    </section>
+
+    
+
+    <section id="project6">
+
+        <h1><a href="#project6">Project6</a><small><a href="#html">Back to Top</a></small></h1>
+
+        
+
+    </section>
+
+    
+
+    <section id="project7">
+
+        <h1><a href="#project7">Project7</a><small><a href="#html">Back to Top</a></small></h1>
+
+        
+
+    </section>
+
+    
+
+    <section id="project8">
+
+        <h1><a href="#project8">Project8</a><small><a href="#html">Back to Top</a></small></h1>
+
+        
+
+    </section>
+
+    
+
+    <section id="">
+
+        <h1><a href="#"></a><small><a href="#html">Back to Top</a></small></h1>
+
+        <p>footer: ©Carol Willing, 2018. <a href="https://speakerdeck.com/willingc/interactivity-in-computer-science">https://speakerdeck.com/willingc/interactivity-in-computer-science</a><br />
+slidenumbers: true<br />
+build-lists: true<br />
+theme: Next, 2</p>
+
+<h1 id="interactivity">Interactivity</h1>
+
+<h2 id="in-computer-science">in Computer Science</h2>
+
+<h3 id="epic-workshop">EPIC Workshop</h3>
+
+<h3 id="july-2018">July 2018</h3>
+
+<hr />
+
+<h1 id="wave-hi-wave">:wave: Hi :wave:</h1>
+
+<h2 id="i-m-carol">I&rsquo;m Carol</h2>
+
+<hr />
+
+<h1 id="carol-willing">Carol Willing</h1>
+
+<p>Research Software Engineer, Cal Poly SLO</p>
+
+<p>Project Jupyter, Steering Council</p>
+
+<p>Python Software Foundation Fellow</p>
+
+<p>Python Core Developer</p>
+
+<p>Open Source Hardware and Software</p>
+
+<p><em>Every day, I am a beginner at something.</em></p>
+
+<p><strong>Learn. Build. Share.</strong></p>
+
+<p><img src="images/carol.jpg" alt="left" /></p>
+
+<hr />
+
+<h1 id="why-computer-science">Why Computer Science?</h1>
+
+<hr />
+
+<h1 id="help-people">Help people</h1>
+
+<p><img src="images/fablabteam.jpg" alt="" /></p>
+
+<hr />
+
+<h1 id="why-interactive">Why Interactive?</h1>
+
+<ul>
+<li>Creative<br /></li>
+<li>Expressive<br /></li>
+<li>Fun<br />
+<br /></li>
+</ul>
+
+<p><img src="images/talktocomputers.jpg" alt="" /></p>
+
+<hr />
+
+<h1 id="my-goals-for-this-workshop">My Goals for this workshop</h1>
+
+<ul>
+<li>Hands-on<br /></li>
+<li>Explore JavaScript and Python<br /></li>
+<li>Inspire to do more<br /></li>
+<li>Share<br />
+<br /></li>
+</ul>
+
+<hr />
+
+<h1 id="what-do-we-need-today">What do we need today?</h1>
+
+<ul>
+<li>Computer (or Smartphone or Tablet)<br /></li>
+<li>Browser (Chrome)<br /></li>
+<li>Web<br /></li>
+<li><strong>You</strong><br />
+<br /></li>
+</ul>
+
+<hr />
+
+<h1 id="alarm-clock-schedule-alarm-clock">:alarm_clock: Schedule :alarm_clock:</h1>
+
+<table>
+<thead>
+<tr>
+<th>Time</th>
+<th>Project</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><em>1:10 pm</em></td>
+<td>People</td>
+</tr>
+
+<tr>
+<td><em>1:20 pm</em></td>
+<td>Careers</td>
+</tr>
+
+<tr>
+<td><em>1:30 pm</em></td>
+<td>Design at Google</td>
+</tr>
+
+<tr>
+<td><em>1:45pm</em></td>
+<td>JavaScript: p5.js</td>
+</tr>
+
+<tr>
+<td><em>2:30 pm</em></td>
+<td>Python: Jupyter and mybinder.org</td>
+</tr>
+
+<tr>
+<td><em>2:45 pm</em></td>
+<td>Next steps</td>
+</tr>
+</tbody>
+</table>
+
+<hr />
+
+<h1 id="http-bit-ly-epic2018cs"><a href="http://bit.ly/epic2018cs">http://bit.ly/epic2018cs</a></h1>
+
+<hr />
+
+<h2 id="project-1">Project 1</h2>
+
+<h1 id="smile-people-teams-smile">:smile: People &amp; Teams :smile:</h1>
+
+<p>^ Pacing: 1:10 pm</p>
+
+<hr />
+
+<h1 id="who-uses-computer-science">Who uses computer science?</h1>
+
+<p><img src="images/luz.png" alt="" /><br />
+<img src="images/diygirls.png" alt="" /><br />
+<img src="images/uber-jesus.png" alt="" /></p>
+
+<hr />
+
+<h3 id="task">Task</h3>
+
+<h2 id="choose-someone-who-you-would">Choose someone who you would:</h2>
+
+<ul>
+<li>want on your team<br /></li>
+<li>like to meet<br /></li>
+<li>like to ask a question<br />
+<br /></li>
+</ul>
+
+<hr />
+
+<h1 id="luz-rivas">Luz Rivas</h1>
+
+<h2 id="california-39th-district-assembly-https-www-luzforassembly-com"><a href="https://www.luzforassembly.com/">California 39th District, Assembly</a></h2>
+
+<h2 id="diy-girls-founder-https-www-diygirls-org-founder"><a href="https://www.diygirls.org/founder/">DIY Girls, Founder</a></h2>
+
+<p><img src="images/luz.png" alt="right, fit" /></p>
+
+<p><img src="images/diygirls.png" alt="left, inline" /></p>
+
+<hr />
+
+<h1 id="jesus-medrano">Jesus Medrano</h1>
+
+<p><img src="images/uber-jesus.png" alt="right, fit" /></p>
+
+<h2 id="uber-eats-software-engineer-https-eng-uber-com-android-eats"><a href="https://eng.uber.com/android-eats/">Uber Eats, Software Engineer</a></h2>
+
+<hr />
+
+<h1 id="omoju-miller">Omoju Miller</h1>
+
+<h2 id="github-data-scientist">GitHub, Data Scientist</h2>
+
+<p><a href="http://omojumiller.com/about/">About Omoju</a></p>
+
+<p><a href="https://youtu.be/BFWVHSeakkg?t=7s">“On learning AI: The myth of innate ability in tech.”</a></p>
+
+<p><img src="https://youtu.be/BFWVHSeakkg?t=7s" alt="left, fit" /></p>
+
+<hr />
+
+<h1 id="limor-fried">Limor Fried</h1>
+
+<h1 id="ladyada">Ladyada</h1>
+
+<h2 id="adafruit-https-learn-adafruit-com-founder-and-ceo"><a href="https://learn.adafruit.com">Adafruit</a>, Founder and CEO</h2>
+
+<h2 id="electrical-engineer">Electrical Engineer</h2>
+
+<p><img src="https://youtu.be/V4WtPv0yWek" alt="right, fit" /></p>
+
+<hr />
+
+<h1 id="ana-ruvalcaba">Ana Ruvalcaba</h1>
+
+<p><img src="images/ana.jpg" alt="right, fit" /></p>
+
+<h2 id="project-jupyter-https-jupyter-org-operations-manager"><a href="https://jupyter.org">Project Jupyter</a>, Operations Manager</h2>
+
+<hr />
+
+<h1 id="bryan-liles">Bryan Liles</h1>
+
+<p><img src="images/bryan.png" alt="right, fit" /></p>
+
+<h2 id="heptio-engineer">Heptio, Engineer</h2>
+
+<p><a href="https://www.youtube.com/watch?v=fYCoEsc4aaE">Cognitive Bias Talk</a></p>
+
+<p><a href="https://github.com/bryanl">GitHub - Bryan Liles</a></p>
+
+<hr />
+
+<h1 id="you">You</h1>
+
+<p><img src="images/you.jpg" alt="right, fit" /></p>
+
+<hr />
+
+<h2 id="project-1-1">Project 1</h2>
+
+<h1 id="people-teams">People &amp; teams</h1>
+
+<ul>
+<li>Teamwork is important<br /></li>
+<li>Find a role model<br /></li>
+<li>Ask questions<br />
+<br /></li>
+</ul>
+
+<h2 id="smile-completed-smile">:smile: Completed :smile:</h2>
+
+<hr />
+
+<h2 id="project-2">Project 2</h2>
+
+<h1 id="computer-science-careers">Computer Science Careers</h1>
+
+<h2 id="school-construction-airplane-office">:school: :construction: :airplane: :office:</h2>
+
+<p>^ Pacing: 1:20 pm</p>
+
+<hr />
+
+<h1 id="coding">Coding</h1>
+
+<h2 id="is-one-of-many-cs-careers">is one of many CS careers.</h2>
+
+<p><img src="images/oneearth.jpg" alt="" /></p>
+
+<hr />
+
+<h2 id="if-you-like">If you like &hellip;</h2>
+
+<h1 id="organizing-planning-events">Organizing, Planning Events</h1>
+
+<ul>
+<li>Community Manager<br /></li>
+<li>Operations Manager<br /></li>
+<li>Project Manager<br /></li>
+<li>Business Owner<br />
+<br /></li>
+</ul>
+
+<p><img src="images/saron.jpg" alt="right" /></p>
+
+<hr />
+
+<h2 id="if-you-like-1">If you like &hellip;</h2>
+
+<h1 id="art">Art</h1>
+
+<ul>
+<li>Designer<br /></li>
+<li>Computer Human Interaction Engineer<br /></li>
+<li>Animator<br /></li>
+<li>Web developer<br />
+<br /></li>
+</ul>
+
+<hr />
+
+<h2 id="if-you-like-2">If you like &hellip;</h2>
+
+<h1 id="math">Math</h1>
+
+<ul>
+<li>Data Scientist<br /></li>
+<li>Research Engineer<br />
+<br /></li>
+</ul>
+
+<p><img src="images/portia.jpg" alt="fit, right" /></p>
+
+<hr />
+
+<h2 id="if-you-like-3">If you like &hellip;</h2>
+
+<h1 id="writing">Writing</h1>
+
+<ul>
+<li>Product Manager<br /></li>
+<li>Documentarian<br /></li>
+<li>Game Developer<br /></li>
+<li>Web Content Engineer<br />
+<br /></li>
+</ul>
+
+<hr />
+
+<h2 id="if-you-like-4">If you like &hellip;</h2>
+
+<h1 id="music">Music</h1>
+
+<ul>
+<li>Sound Engineer<br /></li>
+<li>Special effects<br /></li>
+<li>Computer Generated Musician<br />
+<br /></li>
+</ul>
+
+<p><img src="images/pycaribbean.jpg" alt="" /></p>
+
+<hr />
+
+<h3 id="task-1">Task</h3>
+
+<h2 id="what-interests-you">What interests you?</h2>
+
+<p>Explore coding and the many other Computer Science careers.</p>
+
+<p>Lifelong learning is important in Computer Science.</p>
+
+<p><img src="https://youtu.be/lHC10q_a7Nc" alt="right" /></p>
+
+<hr />
+
+<h2 id="project-2-1">Project 2</h2>
+
+<h1 id="computer-science-careers-1">Computer Science careers</h1>
+
+<ul>
+<li>Find your interests<br /></li>
+<li>Learn which career you may like<br /></li>
+<li>Understand many careers in CS beyond coding<br />
+<br /></li>
+</ul>
+
+<h2 id="smile-completed-smile-1">:smile: Completed :smile:</h2>
+
+<hr />
+
+<h2 id="project-3">Project 3</h2>
+
+<h1 id="design-at-google">Design at Google</h1>
+
+<h2 id="video-game-musical-score-musical-keyboard-art">:video_game: :musical_score: :musical_keyboard: :art:</h2>
+
+<p>^ Pacing: 1:30 pm</p>
+
+<hr />
+
+<h1 id="google-doodles">Google Doodles</h1>
+
+<p><img src="images/google-doodle.png" alt="inline" /></p>
+
+<p>See the <a href="https://www.google.com/doodles">Google Doodles</a> page.</p>
+
+<hr />
+
+<h1 id="step-1-try-the-doodles">Step 1: Try the Doodles</h1>
+
+<p><a href="https://www.google.com/doodles/oskar-fischingers-117th-birthday">Fischinger doodle</a></p>
+
+<p><a href="https://www.google.com/doodles/44th-anniversary-of-the-birth-of-hip-hop">Hip Hop</a></p>
+
+<p><a href="https://www.google.com/search?q=snake+game">Snake Game</a></p>
+
+<p><img src="images/fischinger.png" alt="inline, left" /> <img src="images/hiphop.png" alt="inline, center" /> <img src="images/snakegame.png" alt="inline, left" /></p>
+
+<hr />
+
+<h1 id="step-2-design-ux-review">Step 2: Design/UX Review</h1>
+
+<p><strong>Choose a Google Doodle.</strong><br />
+- What things were <em>interactive</em>?<br />
+- How did it <em>start</em>?<br />
+- How did it <em>end</em>?<br />
+- What do you <em>like</em> best?<br />
+- What would you <em>change</em>?</p>
+
+<p>:bulb: <strong>UX</strong> = <strong>U</strong>ser E<strong>x</strong>perience :bulb:</p>
+
+<hr />
+
+<h1 id="step-3-sketch-a-new-doodle">Step 3: Sketch a new doodle</h1>
+
+<ul>
+<li>Sketch<br /></li>
+<li>What would be interactive?<br /></li>
+<li>Theme/Subject of doodle<br /></li>
+<li>Share with someone<br />
+<br /></li>
+</ul>
+
+<p><img src="images/hiphop-sketch.png" alt="right" /></p>
+
+<hr />
+
+<h2 id="extra-developer-tools">Extra: Developer tools</h2>
+
+<p>Inspect doodle web page with Chrome Developer tools.</p>
+
+<ul>
+<li>View :arrow_right: Developer :arrow_right: View source<br /></li>
+<li>View :arrow_right: Developer :arrow_right: JavaScript Console<br /></li>
+<li>View :arrow_right: Developer :arrow_right: Developer tools<br />
+<br /></li>
+</ul>
+
+<p><a href="https://developers.google.com/web/">Google Web documentation</a></p>
+
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">:eyes: JavaScript documentation from Mozilla :eyes:</a></p>
+
+<hr />
+
+<h2 id="project-3-1">Project 3</h2>
+
+<h1 id="design-at-google-1">Design at Google</h1>
+
+<p>Skills used:<br />
+- Product research<br />
+- User Interface and UX<br />
+- Computer Human Interactions</p>
+
+<h2 id="art-completed-art">:art: Completed :art:</h2>
+
+<hr />
+
+<h2 id="project-4">Project 4</h2>
+
+<h1 id="get-started-with-javascript">Get started with JavaScript</h1>
+
+<hr />
+
+<h1 id="p5-js">p5.js</h1>
+
+<h2 id="https-p5js-org-https-p5js-org"><a href="https://p5js.org">https://p5js.org/</a></h2>
+
+<p><img src="images/p5-js-home.png" alt="" /></p>
+
+<hr />
+
+<h1 id="learn-about-p5-js">Learn about p5.js</h1>
+
+<h3 id="https-hello-p5js-org-https-hello-p5js-org"><a href="https://hello.p5js.org/">https://hello.p5js.org/</a></h3>
+
+<hr />
+
+<h1 id="explore">Explore</h1>
+
+<h3 id="reference-https-p5js-org-reference-referencia-https-p5js-org-es-reference"><a href="https://p5js.org/reference/">Reference</a> | <a href="https://p5js.org/es/reference/">Referencia</a></h3>
+
+<p><img src="images/referencia.png" alt="right, fit" /></p>
+
+<hr />
+
+<h1 id="try-the-editor">Try the editor</h1>
+
+<h3 id="https-alpha-editor-p5js-org-https-alpha-editor-p5js-org"><a href="https://alpha.editor.p5js.org/">https://alpha.editor.p5js.org/</a></h3>
+
+<hr />
+
+<p><img src="images/editor.png" alt="fit" /></p>
+
+<hr />
+
+<p><img src="images/editor-examples.png" alt="fit" /></p>
+
+<hr />
+
+<p><img src="images/wavemaker.png" alt="fit" /></p>
+
+<hr />
+
+<h1 id="interact">Interact</h1>
+
+<ul>
+<li>Move mouse over image<br /></li>
+<li>Change | Run | Change | Run<br />
+<br /></li>
+</ul>
+
+<hr />
+
+<h2 id="project-4-1">Project 4</h2>
+
+<h1 id="get-started-with-javascript-1">Get started with JavaScript</h1>
+
+<ul>
+<li>Use a new language<br /></li>
+<li>Help with Reference<br /></li>
+<li>Try the editor<br /></li>
+<li>Run an example<br />
+<br /></li>
+</ul>
+
+<h2 id="sparkles-completed-sparkles">:sparkles: Completed :sparkles:</h2>
+
+<hr />
+
+<h2 id="project-5">Project 5</h2>
+
+<h1 id="drawing">Drawing</h1>
+
+<hr />
+
+<h1 id="modern-websites">Modern websites</h1>
+
+<p>In general:</p>
+
+<ul>
+<li>HTML :arrow_right: Structure<br /></li>
+<li>CSS :arrow_right: Style<br /></li>
+<li>JavaScript (<code>.js</code>) :arrow_right: interactivity<br />
+<br /></li>
+</ul>
+
+<p>:bulb: <a href="https://codepen.io">codepen.io</a> to test code :bulb:</p>
+
+<p><img src="images/codepen.png" alt="right, fit" /></p>
+
+<hr />
+
+<h1 id="sketch-js-is-a-javascript-file"><code>sketch.js</code> is a JavaScript file</h1>
+
+<p>[.code: auto(42), line-height(2.0)]</p>
+
+<p><strong><code>sketch.js</code></strong></p>
+
+<pre><code class="language-javascript">function setup() {
+  // put setup code here
+}
+
+function draw() {
+  // put drawing code here
+}
+</code></pre>
+
+<hr />
+
+<h1 id="index-html"><code>index.html</code></h1>
+
+<p>[.code: auto(42), line-height(2.0)]</p>
+
+<p>```html, [.highlight: 7, 10]<br />
+&lt;!DOCTYPE html&gt;<br />
+<html><br />
+  <head><br />
+    <meta charset="utf-8"><br />
+    <meta name="viewport" width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0><br />
+    <style> body {padding: 0; margin: 0;} </style><br />
+    <script src="../p5.min.js"></script><br />
+    <script src="../addons/p5.dom.min.js"></script><br />
+    <script src="../addons/p5.sound.min.js"></script><br />
+    <script src="sketch.js"></script><br />
+  </head><br />
+  <body><br />
+  </body><br />
+</html></p>
+
+<pre><code>
+---
+
+### Canvas
+
+The canvas coordinates are different than in math class.
+- top left `(0,0)`
+- bottom right `(width-1, height-1)`
+
+[.code: auto(42), line-height(2.0)]
+
+```javascript
+createCanvas(300, 100);  // Canvas width is 300 pixels, height is 100 pixels
+</code></pre>
+
+<p><img src="images/canvas-300-100.png" alt="" /></p>
+
+<p>For example:<br />
+- top left <code>(0,0)</code><br />
+- bottom right <code>(299, 99)</code></p>
+
+<hr />
+
+<h2 id="draw-an-ellipse-and-circle">Draw an ellipse and circle</h2>
+
+<pre><code class="language-javascript">ellipse(centerPixelsFromLeft, centerPixelsFromTop, width, height);
+</code></pre>
+
+<p><em>Example</em></p>
+
+<p>[.code: auto(42), line-height(2.0)]</p>
+
+<p>```javascript, [.highlight: 6-7]<br />
+function setup() {<br />
+  createCanvas(400, 400);<br />
+}</p>
+
+<p>function draw() {<br />
+  ellipse(150, 90, 20, 20);  // Draw a circle (width=height)<br />
+  ellipse(200, 200, 80, 10); // Draw an ellipse<br />
+}</p>
+
+<pre><code>
+---
+
+![fit](images/draw-ellipse.png)
+
+---
+
+## Draw more shapes
+
+[.code: auto(42), line-height(2.0)]
+
+```javascript, [.highlight: 6-10]
+function setup() {
+  createCanvas(400, 400);
+}
+
+function draw() {
+  ellipse(150, 90, 20, 20);  // Draw a circle (width=height)
+  ellipse(200, 200, 80, 10); // Draw an ellipse
+  line(0, 0, 50, 50);
+  rectangle(300, 200, 50, 30);
+  rectangle(50, 70, 30, 30);
+}
+</code></pre>
+
+<hr />
+
+<p><img src="images/draw-shapes.png" alt="fit" /></p>
+
+<hr />
+
+<h2 id="explore-1">Explore</h2>
+
+<ul>
+<li>Change values<br /></li>
+<li>Add a shape<br /></li>
+<li>Run examples<br />
+<br /></li>
+</ul>
+
+<hr />
+
+<h2 id="project-5-1">Project 5</h2>
+
+<h1 id="drawing-1">Drawing</h1>
+
+<ul>
+<li>Learn about HTML, CSS, JS files<br /></li>
+<li>Understand canvas<br /></li>
+<li>Code a shape<br /></li>
+<li>Code multiple shapes<br />
+<br /></li>
+</ul>
+
+<h2 id="cake-completed-cake">:cake: Completed :cake:</h2>
+
+<hr />
+
+<h2 id="project-6">Project 6</h2>
+
+<h1 id="interactivity-1">Interactivity</h1>
+
+<hr />
+
+<h1 id="interactivity-1-1">Interactivity 1</h1>
+
+<hr />
+
+<h1 id="color">Color</h1>
+
+<p>Red (<code>r</code>)</p>
+
+<p>Green (<code>g</code>)</p>
+
+<p>Blue (<code>b</code>)</p>
+
+<p>A color is a mix of red, green, blue.</p>
+
+<p>Color value: 0 to 255</p>
+
+<hr />
+
+<p><img src="images/interactive1.png" alt="fit" /></p>
+
+<hr />
+
+<h1 id="interactivity-2">Interactivity 2</h1>
+
+<h2 id="sliders-and-widgets">Sliders and Widgets</h2>
+
+<hr />
+
+<p><img src="images/interactive2.png" alt="fit" /></p>
+
+<hr />
+
+<h2 id="project-6-1">Project 6</h2>
+
+<h1 id="interactivity-1-2">Interactivity</h1>
+
+<ul>
+<li>Use widgets<br /></li>
+<li>Control using mouse clicks<br />
+<br />
+<br /></li>
+</ul>
+
+<h2 id="ocean-completed-ocean">:ocean: Completed :ocean:</h2>
+
+<hr />
+
+<h2 id="project-7">Project 7</h2>
+
+<h1 id="python-jupyter-binder">Python, Jupyter, &amp; Binder</h1>
+
+<hr />
+
+<h2 id="python">Python</h2>
+
+<p><a href="https://python.org">https://python.org</a></p>
+
+<p>Press the yellow button.</p>
+
+<p><img src="images/python.png" alt="fit, right" /></p>
+
+<hr />
+
+<p><img src="images/python-code.png" alt="inline" /></p>
+
+<p>Use Python as an interactive calculator.</p>
+
+<hr />
+
+<h2 id="jupyter-and-binder">Jupyter and Binder</h2>
+
+<p><img src="images/jupyter.png" alt="fit,right" /></p>
+
+<p><a href="https://jupyter.org">https://jupyter.org</a></p>
+
+<p><a href="https://try.jupyter.org">https://try.jupyter.org</a></p>
+
+<p><a href="https://mybinder.org">https://mybinder.org</a></p>
+
+<hr />
+
+<p><img src="images/tryjupyter.png" alt="inline" /></p>
+
+<p><a href="https://try.jupyter.org">https://try.jupyter.org</a></p>
+
+<hr />
+
+<h2 id="project-7-1">Project 7</h2>
+
+<h1 id="python-jupyter-binder-1">Python, Jupyter, &amp; Binder</h1>
+
+<ul>
+<li>Interactivity in the Real World<br /></li>
+<li>Python programming language<br /></li>
+<li>Project Jupyter - interactive notebooks<br /></li>
+<li>Binder - sharing notebooks<br />
+<br />
+<br /></li>
+</ul>
+
+<h2 id="snake-completed-snake">:snake: Completed :snake:</h2>
+
+<hr />
+
+<h1 id="what-s-next">What&rsquo;s next?</h1>
+
+<hr />
+
+<h2 id="try-new-applications">Try new applications</h2>
+
+<h3 id="ai-and-machine-learning-examples">AI and Machine Learning Examples</h3>
+
+<p><a href="https://experiments.withgoogle.com/ai/ai-duet/view/">AI Duet</a></p>
+
+<p><a href="https://experiments.withgoogle.com/ai/sound-maker/view/">Sound-Maker</a></p>
+
+<hr />
+
+<h2 id="tutorials">Tutorials</h2>
+
+<p><a href="https://hello.p5js.org/">https://hello.p5js.org/</a></p>
+
+<p><a href="https://hello.processing.org">https://hello.processing.org</a></p>
+
+<p><a href="https://learn.adafruit.com">https://learn.adafruit.com</a></p>
+
+<hr />
+
+<h2 id="school-classes">School classes</h2>
+
+<ul>
+<li>College ready curriculum<br /></li>
+<li>Ask questions<br /></li>
+<li>Remember, you can :smile:<br />
+<br /></li>
+</ul>
+
+<hr />
+
+<h1 id="great-job">Great job!</h1>
+
+<p>:tada: Your accomplishments :tada:</p>
+
+<table>
+<thead>
+<tr>
+<th>Number</th>
+<th>Project</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><em>1</em></td>
+<td>People</td>
+</tr>
+
+<tr>
+<td><em>2</em></td>
+<td>Careers</td>
+</tr>
+
+<tr>
+<td><em>3</em></td>
+<td>Design at Google</td>
+</tr>
+
+<tr>
+<td></td>
+<td><strong>Javascript: p5.js</strong></td>
+</tr>
+
+<tr>
+<td><em>4</em></td>
+<td>Getting started</td>
+</tr>
+
+<tr>
+<td><em>5</em></td>
+<td>Draw</td>
+</tr>
+
+<tr>
+<td><em>6</em></td>
+<td>Interactivity</td>
+</tr>
+
+<tr>
+<td><em>7</em></td>
+<td>Python: Jupyter and mybinder.org</td>
+</tr>
+
+<tr>
+<td><em>8</em></td>
+<td>Next steps</td>
+</tr>
+</tbody>
+</table>
+
+<hr />
+
+<h1 id="thank-you">Thank you</h1>
+
+<p>willingc AT gmail DOT com</p>
+
+<hr />
+
+<h2 id="attributions">Attributions</h2>
+
+<p>Photos:</p>
+
+<p>Videos:</p>
+
+
+    </section>
+
+    
+
+</body>
+</html>

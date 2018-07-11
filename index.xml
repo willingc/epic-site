@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Interactivity in Computer Science: EPIC 2018 Workshop</title>
+    <link>http://willingc.github.io/epic2018cs/</link>
+    <description>Recent content on Interactivity in Computer Science: EPIC 2018 Workshop</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 10 Jul 2018 18:08:00 -0700</lastBuildDate>
+    
+	<atom:link href="http://willingc.github.io/epic2018cs/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Project 1: People &amp; Teams</title>
+      <link>http://willingc.github.io/epic2018cs/project1/</link>
+      <pubDate>Tue, 10 Jul 2018 18:08:00 -0700</pubDate>
+      
+      <guid>http://willingc.github.io/epic2018cs/project1/</guid>
+      <description>Who uses computer science? Task Choose someone who you would:
+ want on your team
+ like to meet
+ like to ask a question
+  Luz Rivas California 39th District, Assembly
+DIY Girls, Founder
+Jesus Medrano Uber Eats, Software Engineer
+Omoju Miller GitHub, Data Scientist
+About Omoju
+“On learning AI: The myth of innate ability in tech.”
+Limor Fried (Ladyada) Adafruit, Founder and CEO
+Electrical Engineer
+About Making video</description>
+    </item>
+    
+    <item>
+      <title>Project 2: Computer Science Careers</title>
+      <link>http://willingc.github.io/epic2018cs/project2/</link>
+      <pubDate>Tue, 10 Jul 2018 18:08:08 -0700</pubDate>
+      
+      <guid>http://willingc.github.io/epic2018cs/project2/</guid>
+      <description>Coding is one of many CS careers.
+If you like &amp;hellip; Organizing, Planning Events
+ Community Manager
+ Operations Manager
+ Project Manager
+ Business Owner
+  If you like &amp;hellip; Art
+ Designer
+ Computer Human Interaction Engineer
+ Animator
+ Web developer
+  If you like &amp;hellip; Math
+ Data Scientist
+ Research Engineer
+  If you like &amp;hellip; Writing
+ Product Manager
+ Documentarian</description>
+    </item>
+    
+    <item>
+      <title>Project3</title>
+      <link>http://willingc.github.io/epic2018cs/project3/</link>
+      <pubDate>Tue, 10 Jul 2018 18:08:15 -0700</pubDate>
+      
+      <guid>http://willingc.github.io/epic2018cs/project3/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Project4</title>
+      <link>http://willingc.github.io/epic2018cs/project4/</link>
+      <pubDate>Tue, 10 Jul 2018 18:08:22 -0700</pubDate>
+      
+      <guid>http://willingc.github.io/epic2018cs/project4/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Project5</title>
+      <link>http://willingc.github.io/epic2018cs/project5/</link>
+      <pubDate>Tue, 10 Jul 2018 18:08:30 -0700</pubDate>
+      
+      <guid>http://willingc.github.io/epic2018cs/project5/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Project6</title>
+      <link>http://willingc.github.io/epic2018cs/project6/</link>
+      <pubDate>Tue, 10 Jul 2018 18:08:38 -0700</pubDate>
+      
+      <guid>http://willingc.github.io/epic2018cs/project6/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Project7</title>
+      <link>http://willingc.github.io/epic2018cs/project7/</link>
+      <pubDate>Tue, 10 Jul 2018 18:08:48 -0700</pubDate>
+      
+      <guid>http://willingc.github.io/epic2018cs/project7/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Project8</title>
+      <link>http://willingc.github.io/epic2018cs/project8/</link>
+      <pubDate>Tue, 10 Jul 2018 18:08:56 -0700</pubDate>
+      
+      <guid>http://willingc.github.io/epic2018cs/project8/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://willingc.github.io/epic2018cs/epic-workshop-part1-ms/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://willingc.github.io/epic2018cs/epic-workshop-part1-ms/</guid>
+      <description>footer: ©Carol Willing, 2018. https://speakerdeck.com/willingc/interactivity-in-computer-science
+slidenumbers: true
+build-lists: true
+theme: Next, 2
+Interactivity in Computer Science EPIC Workshop July 2018 :wave: Hi :wave: I&amp;rsquo;m Carol Carol Willing Research Software Engineer, Cal Poly SLO
+Project Jupyter, Steering Council
+Python Software Foundation Fellow
+Python Core Developer
+Open Source Hardware and Software
+Every day, I am a beginner at something.
+Learn. Build. Share.
+Why Computer Science? Help people Why Interactive?  Creative</description>
+    </item>
+    
+  </channel>
+</rss>
