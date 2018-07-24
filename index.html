@@ -6,7 +6,7 @@
     <title>Interactivity in Computer Science: EPIC 2018 Workshop</title>
     <meta name="description" content="hugo-simpledoc-theme - clean and convenient documentation theme for Hugo website generator">
     <meta name="author" content="Pavel Kanyshev">
-    <meta name="generator" content="Hugo 0.41" />
+    <meta name="generator" content="Hugo 0.44" />
     <style type="text/css">
     body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td {
         margin: 0;
@@ -251,6 +251,12 @@
             <a href="https://github.com/willingc/epic-interactive/blob/master/epic-workshop.pdf" target="blank">View and Download Workshop PDF</a>
         
             <a href="https://alpha.editor.p5js.org/" target="blank">p5.js editor</a>
+        
+            <a href="https://www.google.com/doodles" target="blank">Interactive Google Doodles</a>
+        
+            <a href="https://github.com/maartenbreddels/talk-ipyvolume-scipy2018" target="blank">Binder and Jupyter Example using ipyvolume</a>
+        
+            <a href="https://experiments.withgoogle.com/collection/ai" target="blank">Google Research AI</a>
         
         </nav>
         <nav>
@@ -625,33 +631,31 @@ function draw() {
 
 <h1 id="index-html"><code>index.html</code></h1>
 
-<p>```html, [.highlight: 7, 10]<br />
-&lt;!DOCTYPE html&gt;<br />
-<html><br />
-  <head><br />
-    <meta charset="utf-8"><br />
-    <meta name="viewport" width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0><br />
-    <style> body {padding: 0; margin: 0;} </style><br />
-    <script src="../p5.min.js"></script><br />
-    <script src="../addons/p5.dom.min.js"></script><br />
-    <script src="../addons/p5.sound.min.js"></script><br />
-    <script src="sketch.js"></script><br />
-  </head><br />
-  <body><br />
-  </body><br />
-</html></p>
+<pre><code class="language-html,">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0&gt;
+    &lt;style&gt; body {padding: 0; margin: 0;} &lt;/style&gt;
+    &lt;script src=&quot;../p5.min.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;../addons/p5.dom.min.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;../addons/p5.sound.min.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;sketch.js&quot;&gt;&lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
 
-<pre><code>
----
+<hr />
 
-# Canvas
+<h1 id="canvas">Canvas</h1>
 
-The canvas coordinates are different than in math class.
-- top left `(0,0)`
-- bottom right `(width-1, height-1)`
+<p>The canvas coordinates are different than in math class.<br />
+- top left <code>(0,0)</code><br />
+- bottom right <code>(width-1, height-1)</code></p>
 
-```javascript
-createCanvas(300, 100);  // Canvas width is 300 pixels, height is 100 pixels
+<pre><code class="language-javascript">createCanvas(300, 100);  // Canvas width is 300 pixels, height is 100 pixels
 </code></pre>
 
 <p>For example:<br />
@@ -669,23 +673,21 @@ createCanvas(300, 100);  // Canvas width is 300 pixels, height is 100 pixels
 
 <p>[.code: auto(42), line-height(2.0)]</p>
 
-<p>```javascript, [.highlight: 6-7]<br />
-function setup() {<br />
-  createCanvas(400, 400);<br />
-}</p>
+<pre><code class="language-javascript,">function setup() {
+  createCanvas(400, 400);
+}
 
-<p>function draw() {<br />
-  ellipse(150, 90, 20, 20);  // Draw a circle (width=height)<br />
-  ellipse(200, 200, 80, 10); // Draw an ellipse<br />
-}</p>
+function draw() {
+  ellipse(150, 90, 20, 20);  // Draw a circle (width=height)
+  ellipse(200, 200, 80, 10); // Draw an ellipse
+}
+</code></pre>
 
-<pre><code>
----
+<hr />
 
-# Draw more shapes
+<h1 id="draw-more-shapes">Draw more shapes</h1>
 
-```javascript, [.highlight: 6-10]
-function setup() {
+<pre><code class="language-javascript,">function setup() {
   createCanvas(400, 400);
 }
 
@@ -1518,35 +1520,33 @@ function draw() {
 
 <p>[.code: auto(42), line-height(2.0)]</p>
 
-<p>```html, [.highlight: 7, 10]<br />
-&lt;!DOCTYPE html&gt;<br />
-<html><br />
-  <head><br />
-    <meta charset="utf-8"><br />
-    <meta name="viewport" width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0><br />
-    <style> body {padding: 0; margin: 0;} </style><br />
-    <script src="../p5.min.js"></script><br />
-    <script src="../addons/p5.dom.min.js"></script><br />
-    <script src="../addons/p5.sound.min.js"></script><br />
-    <script src="sketch.js"></script><br />
-  </head><br />
-  <body><br />
-  </body><br />
-</html></p>
+<pre><code class="language-html,">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0&gt;
+    &lt;style&gt; body {padding: 0; margin: 0;} &lt;/style&gt;
+    &lt;script src=&quot;../p5.min.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;../addons/p5.dom.min.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;../addons/p5.sound.min.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;sketch.js&quot;&gt;&lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
 
-<pre><code>
----
+<hr />
 
-### Canvas
+<h3 id="canvas">Canvas</h3>
 
-The canvas coordinates are different than in math class.
-- top left `(0,0)`
-- bottom right `(width-1, height-1)`
+<p>The canvas coordinates are different than in math class.<br />
+- top left <code>(0,0)</code><br />
+- bottom right <code>(width-1, height-1)</code></p>
 
-[.code: auto(42), line-height(2.0)]
+<p>[.code: auto(42), line-height(2.0)]</p>
 
-```javascript
-createCanvas(300, 100);  // Canvas width is 300 pixels, height is 100 pixels
+<pre><code class="language-javascript">createCanvas(300, 100);  // Canvas width is 300 pixels, height is 100 pixels
 </code></pre>
 
 <p><img src="images/canvas-300-100.png" alt="" /></p>
@@ -1566,29 +1566,27 @@ createCanvas(300, 100);  // Canvas width is 300 pixels, height is 100 pixels
 
 <p>[.code: auto(42), line-height(2.0)]</p>
 
-<p>```javascript, [.highlight: 6-7]<br />
-function setup() {<br />
-  createCanvas(400, 400);<br />
-}</p>
+<pre><code class="language-javascript,">function setup() {
+  createCanvas(400, 400);
+}
 
-<p>function draw() {<br />
-  ellipse(150, 90, 20, 20);  // Draw a circle (width=height)<br />
-  ellipse(200, 200, 80, 10); // Draw an ellipse<br />
-}</p>
+function draw() {
+  ellipse(150, 90, 20, 20);  // Draw a circle (width=height)
+  ellipse(200, 200, 80, 10); // Draw an ellipse
+}
+</code></pre>
 
-<pre><code>
----
+<hr />
 
-![fit](images/draw-ellipse.png)
+<p><img src="images/draw-ellipse.png" alt="fit" /></p>
 
----
+<hr />
 
-## Draw more shapes
+<h2 id="draw-more-shapes">Draw more shapes</h2>
 
-[.code: auto(42), line-height(2.0)]
+<p>[.code: auto(42), line-height(2.0)]</p>
 
-```javascript, [.highlight: 6-10]
-function setup() {
+<pre><code class="language-javascript,">function setup() {
   createCanvas(400, 400);
 }
 

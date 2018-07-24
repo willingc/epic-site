@@ -109,11 +109,7 @@ Interact  Move mouse over image
  JavaScript (.js) :arrow_right: interactivity
   codepen.io to test code :bulb:
 sketch.js is a JavaScript file sketch.js
-function setup() { // put setup code here } function draw() { // put drawing code here }  index.html ```html, [.highlight: 7, 10]
-&amp;lt;!DOCTYPE html&amp;gt;
-
-
- body {padding: 0; margin: 0;}</description>
+function setup() { // put setup code here } function draw() { // put drawing code here }  index.html &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta charset=&amp;quot;utf-8&amp;quot;&amp;gt; &amp;lt;meta name=&amp;quot;viewport&amp;quot; width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0&amp;gt; &amp;lt;style&amp;gt; body {padding: 0; margin: 0;} &amp;lt;/style&amp;gt; &amp;lt;script src=&amp;quot;.</description>
     </item>
     
     <item>
